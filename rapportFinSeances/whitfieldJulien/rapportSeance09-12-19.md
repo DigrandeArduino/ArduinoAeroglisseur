@@ -2,7 +2,7 @@ Taches effectuées par Julien WHITFIELD
 Rapport Séance 01 
 
 Travaille avant la séance :
- -réalisation du plan de travaille
+-Réalisation du planning et de la répartition des tâches
 -Réalisation des croquis du plan 2D
 
 Travaille effectuer :
