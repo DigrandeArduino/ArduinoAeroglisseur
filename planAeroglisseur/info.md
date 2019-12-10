@@ -1,3 +1,3 @@
-Ici sont placer les plans du projet
+Ici sont placés les plans du projet
 
-Here are place all projects plans
+Here are placed all projects plans
