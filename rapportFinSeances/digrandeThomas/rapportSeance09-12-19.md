@@ -7,7 +7,7 @@ Voici l'ensemble des tâches réalisé durant cette première séance : téléch
 
 Final : rendez vous avec le FabLab pour realisé la decoupe laser des deux pieces.
 
-Suite de la séance : Test des moteurs brushless avec un code d'essai (voir dossier code; fichier testbrushless.md). Résultat : puissance motrice suffisante pour générer un flux d'air important. Suite : Trouver deux hélices de tailles  120 mm. Commande des hélices.
+Suite de la séance : Test des moteurs brushless avec un code d'essai (voir dossier code; fichier testbrushless.md). Résultat : puissance motrice suffisante pour générer un flux d'air important. Flux d'air suffisant (?) : à confirmer. Suite : Trouver deux hélices de tailles  120 mm. Commande des hélices.
 
 Matériel obtenue à ce jour : 6 controleurs brushless; moteurs brushless; Cablerie; Alimentation de test.
                              
