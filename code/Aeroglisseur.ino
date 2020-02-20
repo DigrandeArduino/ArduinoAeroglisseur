@@ -16,7 +16,7 @@ int val;
 int const MLevA=0;
 int const MLevD=1;
 int const SVol=4;
-int const MAvG=2;
+int const MAvG=5;
 int const MAvD=3;
 
 float tempsLev;
@@ -63,10 +63,13 @@ void loop() {
   tempsVol+=-1065;
   SortieVol=650-((tempsVol/800)*260);
   //Serial.println(SortieVol);
+  if( SortieVol>510 && SortieVol < 530){
+    SortieVol=520;
+  }
   pwm.setPWM(SVol, 0, SortieVol);
 
   tempsLev+=-1000;
-  SortieLev1=135+(tempsLev/800)*425;
+  SortieLev1=165+(tempsLev/800)*395;
   SortieLev2=255+(tempsLev/800)*180;
   //Serial.println(SortieLev1);
   //Serial.println(SortieLev2);
@@ -75,8 +78,8 @@ void loop() {
 
   tempsAv+=-1000;
   dir=(tempsVol/800)-0.51;
-  SortieAv1=415-((tempsAv/800)*300)+(1-dir)*300;
-  SortieAv2=465-((tempsAv/800)*290)+dir*300;
+  SortieAv1=415-((tempsAv/800)*300)+(dir)*300;
+  SortieAv2=415-((tempsAv/800)*300)+(-dir)*300;
   //Serial.println(SortieAv1);
   Serial.println(SortieAv2);
   //Serial.println(dir);
