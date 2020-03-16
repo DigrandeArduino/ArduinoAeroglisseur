@@ -1,7 +1,6 @@
 #include <Adafruit_PWMServoDriver.h>
 #include <Wire.h>
 #include <Servo.h>
-Servo servoVol;
 Servo servoLev;
 Servo servoAv;
 Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
@@ -15,7 +14,6 @@ int val;
 
 int const MLevA=0;
 int const MLevD=1;
-int const SVol=4;
 int const MAvG=5;
 int const MAvD=3;
 
@@ -60,14 +58,6 @@ void loop() {
   //Serial.println("temps Avancer");
   //Serial.println(tempsAv-1070);
 
-  tempsVol+=-1065;
-  SortieVol=650-((tempsVol/800)*260);
-  //Serial.println(SortieVol);
-  if( SortieVol>510 && SortieVol < 530){
-    SortieVol=520;
-  }
-  pwm.setPWM(SVol, 0, SortieVol);
-
   tempsLev+=-1000;
   SortieLev1=165+(tempsLev/800)*395;
   SortieLev2=255+(tempsLev/800)*180;
@@ -76,6 +66,7 @@ void loop() {
   pwm.setPWM(MLevA, 0, SortieLev2);
   pwm.setPWM(MLevD, 0, SortieLev1);
 
+  tempsVol+=-1065;
   tempsAv+=-1000;
   dir=(tempsVol/800)-0.51;
   SortieAv1=415-((tempsAv/800)*300)+(dir)*300;
@@ -87,7 +78,6 @@ void loop() {
   pwm.setPWM(MAvD, 0, SortieAv2);
   }
   else{
-    pwm.setPWM(SVol, 0, 520);
     pwm.setPWM(MLevA, 0, 0);
     pwm.setPWM(MLevD, 0, 0);
     pwm.setPWM(MAvG, 0, 0);
